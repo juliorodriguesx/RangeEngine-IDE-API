@@ -46,7 +46,7 @@ def setWindowSize(width, height):
 	height (integer) - height in pixels"""
 	pass
 	
-def setFullscreen(enable):
+def setFullScreen(enable):
 	"""Set whether or not the window should be fullscreen.
 
 	Note: Only works in the standalone player, not the Blender-embedded player.
@@ -55,7 +55,7 @@ def setFullscreen(enable):
 	enable (bool) - True to set full screen, False to set windowed."""
 	pass
 	
-def getFullscreen():
+def getFullScreen():
 	"""Returns whether or not the window is fullscreen.
 
 	Note: Only works in the standalone player, not the Blender-embedded player; there it always returns False.
