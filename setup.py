@@ -4,8 +4,8 @@ with open("README.rst", "r") as fh:
 	long_description = fh.read()
 
 setup(
-	name = 'fake-blender-api-2.79',
-	version = '0.3.1',
+	name = 'fake-Upbge-api-0.2.5',
+	version = '0.3.2',
 	
 	packages = [
 		"aud", 
@@ -41,12 +41,12 @@ setup(
 	],
 	
 	license='GPLv3',
-	description = "Fake Blender 2.79 Python API for code completion, including BGE",
+	description = "Fake Upbge 0.2.5 Python API for code completion",
 	long_description=long_description,
 	long_description_content_type="text/x-rst",
 	author = 'Joel Gomes da Silva',
 	author_email = 'joelgomes1994@hotmail.com',
-	url = 'https://github.com/bgempire/fake-blender-api-2.79',
+	url = 'https://github.com/EndSSgamesStudio/Fake-Upbge-api-0.2.5',
 	download_url = 'https://github.com/bgempire/fake-blender-api-2.79/archive/0.3.tar.gz',
 	
 	keywords = [
