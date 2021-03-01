@@ -2,7 +2,7 @@
 
 Generic 3-dimentional kd-tree to perform spatial searches."""
 
-class KDTree:
+class KDTree(Size):
 	"""KdTree(size) -> new kd-tree initialized to hold size items.
 
 	Note: KDTree.balance must have been called before using any of the find methods."""
