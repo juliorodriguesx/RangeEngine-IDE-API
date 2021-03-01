@@ -55,3 +55,13 @@ class KDTree(Size):
 		
 		from . import Vector
 		return [Vector, 1, 1.0]
+
+	def insert(self, co, index):
+		"""Insert a point into the KDTree.
+
+		Parameters:
+		co (float triplet) – 3d coordinates.
+		index (int) – Object Index.
+		"""
+
+		pass
