@@ -2090,6 +2090,40 @@ class KX_MeshProxy(SCA_IObject):
 		uv_index_from (integer) - optional uv index to copy from, -1 to transform the current uv."""
 		pass
 
+	def getVertexArrayLength(self):
+		"""Gets the length of the vertex array associated with the specified material.
+		There is one vertex array for each material.
+
+		Parameters:
+		matid (integer) – the specified material
+
+		Returns: the number of verticies in the vertex array. (integer)
+		"""
+		pass
+	def replaceMaterial(self):
+		"""Replace the material in slot matid by the material material.
+		Parameters:
+		matid (integer) – The material index.
+		material (KX_BlenderMaterial) – The material replacement.
+
+		Warning:
+		Changing the material of a mesh used by many objects can be slow. This function should be not called every frames.
+		"""
+		pass
+
+	def constructBvh(self):
+		"""Return a BVH tree based on mesh geometry. Indices of tree elements match polygons indices.
+
+		Parameters:
+		transform (mathutils.Matrix) – The transform 4x4 matrix applied to vertices.
+		epsilon (float) – The tree distance epsilon.
+
+		Returns:
+		A BVH tree based on mesh geometry.
+
+		Return type: mathutils.bvhtree.BVHTree
+		"""
+		pass
 	pass
 
 class KX_MouseActuator(SCA_IActuator):
