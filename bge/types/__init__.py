@@ -195,6 +195,10 @@ class KX_GameObject(SCA_IObject):
 		pass
 		
 	def alignAxisToVect(self, vect, axis=2, factor=1.0):
+		"""Aligns any of the game object's axis along the given vector. (DEPRECATED, please use lookAt instead)"""
+		pass
+
+	def lookAt(self, vect, axis=2, factor=1.0):
 		"""Aligns any of the game object's axis along the given vector.
 
 		Parameters:
@@ -988,7 +992,8 @@ class SCA_PythonKeyboard(PyObjectPlus):
 	The current keyboard."""
 
 	def __init__(self):
-		self.events = {0 : 0}
+		self.events = {0 : SCA_InputEvent}
+		self.inputs = {0 : SCA_InputEvent}
 		self.active_events = {0 : 0}
 	
 	def getClipboard(self, ):
@@ -1007,6 +1012,29 @@ class SCA_PythonKeyboard(PyObjectPlus):
 
 	pass
 
+class SCA_InputEvent(PyObjectPlus):
+	def __init__(self):
+		pass
+	
+	def inactive(self):
+		"""True if the input was inactive from the last frame."""
+		pass
+
+	def active(self):
+		"""True if the input was active from the last frame."""
+		pass
+
+	def activated(self):
+		"""True if the input was activated from the last frame."""
+		pass
+
+	def released(self):
+		"""True if the input was released from the last frame."""
+		pass
+
+	
+		
+
 class SCA_PythonMouse(PyObjectPlus):
 	
 	"""base class - PyObjectPlus
@@ -1016,10 +1044,19 @@ class SCA_PythonMouse(PyObjectPlus):
 	The current mouse."""
 
 	def __init__(self):
-		self.events = {0 : 0}
+		self.events = {0 : SCA_InputEvent}
+		self.inputs = {0 : SCA_InputEvent}
 		self.active_events = {0 : 0}
 		self.position = (int(), int())
 		self.visible = bool()
+
+	def deltaPosition():
+		"""Get mouse delta movement, useful for mouselook."""
+		pass
+
+	def reCenter():
+		"""Resets the mouse position to the center of the screen."""
+		pass
 
 class SCA_RandomActuator(SCA_IActuator):
 	

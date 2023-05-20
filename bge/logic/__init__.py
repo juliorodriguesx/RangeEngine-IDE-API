@@ -618,6 +618,13 @@ def setClockTime(new_time):
 	new_time – the next value of the BGE clock (in second)."""
 	pass
 
+def deltaTime():
+	"""The interval in seconds from the last frame to the current one (Read Only).
+	
+	Return type:
+	float"""
+	return False
+
 # Utility Functions
 def expandPath(path):
 	"""Converts a blender internal path into a proper file system path.
