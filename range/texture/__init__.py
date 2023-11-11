@@ -1,4 +1,4 @@
-"""The bge.texture module allows you to manipulate textures during the game.
+"""The range.texture module allows you to manipulate textures during the game.
 
 Several sources for texture are possible: video files, image files, video capture, memory buffer, camera render or a mix of that.
 
@@ -47,10 +47,10 @@ IMB_BLEND_COPY_ALPHA = 1002
 
 ## Functions
 def getLastError():
-	"""Last error that occurred in a bge.texture function.
+	"""Last error that occurred in a range.texture function.
 
 	Returns:	
-	The description of the last error occurred in a bge.texture function.
+	The description of the last error occurred in a range.texture function.
 
 	Return type:
 	str"""
@@ -92,7 +92,7 @@ def materialID(object, name):
 
 	If the object has no material that matches name, it generates a runtime error. Use try/except to catch the exception.
 
-	Ex: bge.texture.materialID(obj, 'IMvideo.png')
+	Ex: range.texture.materialID(obj, 'IMvideo.png')
 
 	Parameters:
 	object (KX_GameObject) - The game object that uses the texture you want to make dynamic.
@@ -500,7 +500,7 @@ class ImageRender:
 		return True
 		
 	def refresh(self, buffer, format="RGBA"):
-		"""Refresh video - render and optionally copy the image to an external buffer then invalidate its current content. The render may have been started earlier with the render() method, in which case this function simply waits for the render operations to complete. When called without argument, the pixels are not extracted but the render is guaranteed to be completed when the function returns. This only makes sense with offscreen render on texture target (see bge.render.offScreenCreate()).
+		"""Refresh video - render and optionally copy the image to an external buffer then invalidate its current content. The render may have been started earlier with the render() method, in which case this function simply waits for the render operations to complete. When called without argument, the pixels are not extracted but the render is guaranteed to be completed when the function returns. This only makes sense with offscreen render on texture target (see range.render.offScreenCreate()).
 		
 		Parameters:
 		buffer (any buffer type of sufficient size) – An object that implements the buffer protocol. If specified, the image is copied to the buffer, which must be big enough or an exception is thrown. The transfer to the buffer is optimal if no processing of the image is needed. This is the case if flip=False, alpha=True, scale=False, whole=True, depth=False, zbuff=False and no filter is set.
@@ -571,7 +571,7 @@ class Texture:
 	pass
 
 class DeckLink:
-	"""Certain DeckLink devices can be used to playback video: the host sends video frames regularly for immediate or scheduled playback. The video feed is outputted on HDMI or SDI interfaces. This class supports the immediate playback mode: it has a source attribute that is assigned one of the source object in the bge.texture module. Refreshing the DeckLink object causes the image source to be computed and sent to the DeckLink device for immediate transmission on the output interfaces. Keying is supported: it allows to composite the frame with an input video feed that transits through the DeckLink card.
+	"""Certain DeckLink devices can be used to playback video: the host sends video frames regularly for immediate or scheduled playback. The video feed is outputted on HDMI or SDI interfaces. This class supports the immediate playback mode: it has a source attribute that is assigned one of the source object in the range.texture module. Refreshing the DeckLink object causes the image source to be computed and sent to the DeckLink device for immediate transmission on the output interfaces. Keying is supported: it allows to composite the frame with an input video feed that transits through the DeckLink card.
 
 	Parameters:
 	cardIdx (int) – Number of the card to be used for output (0=first card). It should be noted that DeckLink devices are usually half duplex: they can either be used for capture or playback but not both at the same time.
@@ -593,5 +593,5 @@ class DeckLink:
 
 		Parameters:
 		refresh_source (bool) – True if the source objects image buffer should be invalidated after being used to compute the output frame. This triggers the recomputing of the source image on next refresh, which is normally the desired effect. False if the image source buffer should stay valid and reused on next refresh. Note that the DeckLink device stores the output frame and replays until a new frame is sent from the host. Thus, it is not necessary to refresh the DeckLink object if it is known that the image source has not changed.
-		ts (float) – The timestamp value passed to the image source object to compute the image. If unspecified, the BGE clock is used."""
+		ts (float) – The timestamp value passed to the image source object to compute the image. If unspecified, the range clock is used."""
 		pass

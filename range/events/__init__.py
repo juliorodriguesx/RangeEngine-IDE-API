@@ -5,7 +5,7 @@ def EventToString(event):
 	"""Return the string name of a key event. Will raise a ValueError error if its invalid.
 
 	Parameters:
-	event (int) - key event constant from bge.events or the keyboard sensor.
+	event (int) - key event constant from range.events or the keyboard sensor.
 
 	Return type:
 	string"""
@@ -15,7 +15,7 @@ def EventToCharacter(event, shift):
 	"""Return the string name of a key event. Returns an empty string if the event cant be represented as a character.
 
 	Parameters:	
-	event (int) - key event constant from bge.events or the keyboard sensor.
+	event (int) - key event constant from range.events or the keyboard sensor.
 	shift (bool) - set to true if shift is held.
 
 	Return type:

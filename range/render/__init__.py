@@ -102,7 +102,7 @@ def setMousePosition(x, y):
 	pass
 	
 def setBackgroundColor(rgba):
-	"""Deprecated and no longer functional. Use bge.types.KX_WorldInfo.backgroundColor() instead."""
+	"""Deprecated and no longer functional. Use range.types.KX_WorldInfo.backgroundColor() instead."""
 	pass
 	
 def setEyeSeparation(eyesep):
@@ -134,7 +134,7 @@ def getFocalLength():
 	return 0.0
 	
 def getStereoEye():
-	"""Gets the current stereoscopy eye being rendered. This function is mainly used in a bge.types.KX_Scene.pre_draw callback function to customize the camera projection matrices for each stereoscopic eye.
+	"""Gets the current stereoscopy eye being rendered. This function is mainly used in a range.types.KX_Scene.pre_draw callback function to customize the camera projection matrices for each stereoscopic eye.
 
 	Return type:
 	LEFT_EYE, RIGHT_EYE"""

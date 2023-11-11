@@ -11,3 +11,7 @@ has_physics = True
 # UPBGE
 upbge_version = (0, 2, 4)
 upbge_version_string = "0.2 (sub 4)"
+
+# Range Engine
+range_version = (1, 5)
+range_version_string = "1.5"

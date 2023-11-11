@@ -321,31 +321,31 @@ def getCurrentController():
 	"""Gets the Python controller associated with this Python script.
 
 	Return type:
-	bge.types.SCA_PythonController"""
+	range.types.SCA_PythonController"""
 	return types.SCA_PythonController()
 	
 def getCurrentScene():
 	"""Gets the current Scene.
 
 	Return type:
-	bge.types.KX_Scene"""
+	range.types.KX_Scene"""
 	return types.KX_Scene()
 	
 def getSceneList():
 	"""Gets a list of the current scenes loaded in the game engine.
 
 	Return type:
-	list of bge.types.KX_Scene
+	list of range.types.KX_Scene
 
 	Note: Scenes in your blend file that have not been converted wont be in this list. This list will only contain scenes such as overlays scenes."""
 	return [types.KX_Scene()]
 	
 def loadGlobalDict():
-	"""Loads bge.logic.globalDict from a file."""
+	"""Loads range.logic.globalDict from a file."""
 	pass
 	
 def saveGlobalDict():
-	"""Saves bge.logic.globalDict to a file."""
+	"""Saves range.logic.globalDict to a file."""
 	pass
 	
 def startGame(blend):
@@ -376,7 +376,7 @@ def LibLoad(blend, type, data, load_actions=False, verbose=False, load_scripts=T
 	async (bool) - Whether or not to do the loading asynchronously (in another thread). Only the 'Scene' type is currently supported for this feature.
 
 	Return type:
-	bge.types.KX_LibLoadStatus
+	range.types.KX_LibLoadStatus
 
 	Note: Asynchronously loaded libraries will not be available immediately after LibLoad() returns. Use the returned KX_LibLoadStatus to figure out when the libraries are ready."""
 	return types.KX_LibLoadStatus()
@@ -530,7 +530,7 @@ def getExitKey():
 	"""Gets the key used to exit the game engine
 
 	Returns:
-	The key (defaults to bge.events.ESCKEY)
+	The key (defaults to range.events.ESCKEY)
 
 	Return type:
 	int"""
@@ -540,7 +540,7 @@ def setExitKey(key):
 	"""Sets the key used to exit the game engine
 
 	Parameters:
-	key (int) - A key constant from bge.events"""
+	key (int) - A key constant from range.events"""
 	pass
 	
 def NextFrame():
@@ -566,14 +566,14 @@ def getRender():
 
 # Time related functions
 def getClockTime():
-	"""Get the current BGE render time, in seconds. The BGE render time is the simulation time corresponding to the next scene that will be rendered.
+	"""Get the current range render time, in seconds. The range render time is the simulation time corresponding to the next scene that will be rendered.
 	
 	Return type:
 	double"""
 	return 0.0
 
 def getFrameTime():
-	"""Get the current BGE frame time, in seconds. The BGE frame time is the simulation time corresponding to the current call of the logic system. Generally speaking, it is what the user is interested in.
+	"""Get the current range frame time, in seconds. The range frame time is the simulation time corresponding to the current call of the logic system. Generally speaking, it is what the user is interested in.
 	
 	Return type:
 	double"""
@@ -598,14 +598,14 @@ def setTimeScale(time_scale):
 	pass
 
 def getUseExternalClock():
-	"""Get if the BGE use the inner BGE clock, or rely or on an external clock. The default is to use the inner BGE clock.
+	"""Get if the range use the inner range clock, or rely or on an external clock. The default is to use the inner range clock.
 	
 	Return type:
 	bool"""
 	return False
 
 def setUseExternalClock(use_external_clock):
-	"""Set if the BGE use the inner BGE clock, or rely or on an external clock. If the user selects the use of an external clock, he should call regularly the setClockTime method.
+	"""Set if the range use the inner range clock, or rely or on an external clock. If the user selects the use of an external clock, he should call regularly the setClockTime method.
 	
 	Parameters:
 	use_external_clock – the new setting"""
@@ -615,7 +615,7 @@ def setClockTime(new_time):
 	"""Set the next value of the simulation clock. It is preferable to use this method from a custom main function in python, as calling it in the logic block can easily lead to a blocked system (if the time does not advance enough to run at least the next logic step).
 
 	Parameters:
-	new_time – the next value of the BGE clock (in second)."""
+	new_time – the next value of the range clock (in second)."""
 	pass
 
 def deltaTime():
