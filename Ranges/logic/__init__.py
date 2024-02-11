@@ -623,7 +623,7 @@ def deltaTime():
 	
 	Return type:
 	float"""
-	return False
+	return 0.0
 
 # Utility Functions
 def expandPath(path):
