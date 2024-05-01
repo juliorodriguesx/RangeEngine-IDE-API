@@ -23,3 +23,22 @@ Just make sure you installed it on the same Python interpreter that your text is
 Enjoy!
 
 .. _fake-bpy-module: https://github.com/nutti/fake-bpy-module
+
+
+Instruções de Instalação do módulo Range
+------------------------------------------
+
+Apenas para usuários da RANGE ENGINE 1.5+
+
+WINDOWS
+
+- Faça o download do pacote no Github;
+- Abra o diretório onde está instalado seu Python.
+
+Exemplo de diretório no SO Windows:
+
+``C:\Users\[own]\AppData\Local\Programs\Python\Python[version]\Lib``
+
+- Copie e cole a pasta /Range para o diretório do Python.
+
+Pronto! Agora você pode importar o módulo Range em qualquer projeto.
